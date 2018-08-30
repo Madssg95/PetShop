@@ -20,14 +20,14 @@ namespace Easv.PetShop.ConsoleApp
 
         public void StartUI()
         {
+            #region TestData
             //CreatePet("Dingo", "Dog", new DateTime(2000, 10, 10), new DateTime(2010, 10, 10), "White", "Hans", 500.5);
             //CreatePet("Buller", "Dog", new DateTime(2005, 03, 07), new DateTime(2011, 10, 10), "Black", "Martin", 1500.7);
             //CreatePet("Wuff", "Dog", new DateTime(2006, 05, 05), new DateTime(2015, 10, 10), "Grey", "Lukas", 800.5);
             //CreatePet("Karl", "Monkey", new DateTime(2003, 01, 01), new DateTime(2017, 10, 10), "Brown", "Mads", 2500.5);
             //CreatePet("Louis", "Monkey", new DateTime(2010, 11, 09), new DateTime(2018, 10, 10), "Red", "Lars", 3700.5);
             //CreatePet("Luffe", "Dolphin", new DateTime(2001, 12, 10), new DateTime(2007, 10, 10), "Grey", "Ole", 7500.5);
-
-
+            #endregion
 
             string[] menu = new string[]
         {
@@ -85,6 +85,7 @@ namespace Easv.PetShop.ConsoleApp
                     default:
                         break;
                 }
+                Console.WriteLine("Please choose what you want to do next! \n");
                 DisplayMenu(menu);
                 userChoice = GetUserInputInt("\nYour choice:", 1, 8);
             }
@@ -102,7 +103,7 @@ namespace Easv.PetShop.ConsoleApp
             }
             else
             {
-                Console.WriteLine("\nThe list of pets is empty. \n");
+                Console.WriteLine("The list of pets is empty. \n");
             }
             
         }
